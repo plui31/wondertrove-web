@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Learning for Kids</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      /* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #58D68D;
+    color: white;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #FF7043;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#about {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 22%;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.feature h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #555;
+}
+
+#how-it-works {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#how-it-works h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    width: 30%;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.step p {
+    font-size: 14px;
+    color: #555;
+}
+
+#sign-up {
+    padding: 50px 20px;
+    background-color: #FF7043;
+    color: white;
+    text-align: center;
+}
+
+#sign-up h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#sign-up form {
+    margin-top: 20px;
+}
+
+#sign-up input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+#sign-up button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .features, .steps {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature, .step {
+        width: 80%;
+    }
+}
+
+      </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Personalized Learning for Kids</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#sign-up">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Unlock Your Child’s Potential with Fun and Engaging Learning!</h2>
+        <p>Our platform combines exciting offline activities with AI-driven feedback to keep your child learning, engaged, and growing—without endless screen time!</p>
+        <a href="#sign-up" class="cta-button">Join the Waitlist</a>
+    </section>
+
+    <section id="about">
+        <h2>Why Choose Us?</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Offline Learning, Powered by AI</h3>
+                <p>Children complete offline activities like puzzles, games, and hands-on experiments, all designed to boost creativity and problem-solving. Our AI system provides personalized feedback to guide your child's next steps.</p>
+            </div>
+            <div class="feature">
+                <h3>Gamified, Engaging Experience</h3>
+                <p>Children earn rewards for completing challenges, making learning fun and motivating. Each activity is designed like a quest, keeping them excited to reach new milestones!</p>
+            </div>
+            <div class="feature">
+                <h3>Personalized Pathways for Growth</h3>
+                <p>Our system assesses each child's progress and provides personalized learning paths. No more one-size-fits-all—just the right challenges at the right time to help your child thrive!</p>
+            </div>
+            <div class="feature">
+                <h3>Parent Insights with AI-Driven Feedback</h3>
+                <p>Get valuable insights into your child’s progress by uploading photos of completed tasks. Our AI system will analyze their work and suggest the next best steps to help them continue growing!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <h3>1. Print & Start Offline Activities</h3>
+                <p>Print the fun learning materials and watch your child dive into engaging tasks. From science experiments to creative art projects, offline learning has never been this exciting!</p>
+            </div>
+            <div class="step">
+                <h3>2. Scan for Personalized Feedback</h3>
+                <p>Once your child completes a task, take a photo and upload it to the platform. The AI analyzes the activity and provides instant, personalized feedback to guide their next steps.</p>
+            </div>
+            <div class="step">
+                <h3>3. Earn Rewards & Unlock New Challenges</h3>
+                <p>As your child completes tasks, they earn points and unlock new challenges. Our gamified system keeps them motivated to keep learning and exploring new concepts!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sign-up">
+        <h2>Sign Up for Early Access</h2>
+        <p>Be the first to know when we launch and receive updates on new features!</p>
+        <form id="signup-form" action="#">
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <button type="submit" class="cta-button">Sign Up</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Personalized Learning for Kids. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Handling the form submission
+        const form = document.getElementById('signup-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            axios.post('YOUR_BACKEND_ENDPOINT', { email: email })
+                .then(response => {
+                    alert("Thank you for signing up! We’ll notify you when we launch.");
+                })
+                .catch(error => {
+                    alert("Sorry, there was an issue. Please try again.");
+                });
+        });
+    </script>
+</body>
+</html>
